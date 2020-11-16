@@ -117,11 +117,11 @@ Spatial Aggregate Functions may be used in the SELECT clause of a SPARQL query a
 |MaxY(sf:Geometry) | Returns the maximum Y coordinate of all geometries | xsd:double | 
 |MinZ(sf:Geometry) | Returns the minimum Z coordinate of all geometries | xsd:double | 
 |MaxZ(sf:Geometry) | Returns the maximum Z coordinate of all geometries | xsd:double | 
-|geosf:BBOX(sf:Geometry) | Calculates a minimum bounding box of the set of given geometries | xsd:double | 
+|geosf:BBOX(sf:Geometry) | Calculates a minimum bounding box of the set of given geometries |sf:Geometry | 
 |geosf:CENTROID(sf:LineString) | Calculates the centroid of the set of given geometries | sf:Geometry | 
 |geosf:CONCAT_LINES(sf:LineString) | Concatenates a set of LineStrings | sf:Geometry | 
 |geosf:CONCAVEHULL(sf:Geometry) | Calculates the concave hull of the set of given geometries | sf:Geometry | 
 |geosf:CONVEXHULL(sf:Geometry) | Calculates the convex hull of the set of given geometries | sf:Geometry | 
-|geosf:UNION(sf:Geometry) | Calculates the union of the set of given geometries   | xsd:double | 
+|geosf:UNION(sf:Geometry) | Calculates the union of the set of given geometries   | sf:Geometry | 
 |===
 
