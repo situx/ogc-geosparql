@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <title>OGC GeoSPARQL - A Geographic Query Language for RDF Data</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
-/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
-/* Remove comment around @import statement below when using as a custom stylesheet */
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
 /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
-audio,canvas,video{display:inline-block}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
-[hidden],template{display:none}
-script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-a{background:transparent}
+a{background:none}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
 h1{font-size:2em;margin:.67em 0}
@@ -44,12 +42,10 @@ button,select{text-transform:none}
 button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
 button[disabled],html input[disabled]{cursor:default}
 input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
-input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
-input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
-*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
 body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
@@ -67,13 +63,12 @@ img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
 .center{margin-left:auto;margin-right:auto}
-.spread{width:100%}
-p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+.stretch{width:100%}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
 div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
 a{color:#2156a5;text-decoration:underline;line-height:inherit}
 a:hover,a:focus{color:#1d4b8f}
-a img{border:none}
+a img{border:0}
 p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
 p aside{font-size:.875em;line-height:1.35;font-style:italic}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
@@ -83,19 +78,18 @@ h2{font-size:1.6875em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
 h4,h5{font-size:1.125em}
 h6{font-size:1em}
-hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
 em,i{font-style:italic;line-height:inherit}
 strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
 code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
 ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
-ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
 ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
 ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
-ul.no-bullet{list-style:none}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -103,58 +97,65 @@ abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-
 abbr{text-transform:none}
 blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
 blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
-blockquote cite:before{content:"\2014 \0020"}
+blockquote cite::before{content:"\2014 \0020"}
 blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
 blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
-@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
 h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
 table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
-table thead,table tfoot{background:#f7f8f7;font-weight:bold}
+table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
-table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table tr.even,table tr.alt{background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
-.clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
-.clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-*:not(pre)>code.nobreak{word-wrap:normal}
-*:not(pre)>code.nowrap{white-space:nowrap}
-pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
 em em{font-style:normal}
 strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
-kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
 .keyseq kbd:last-child{margin-right:0}
-.menuseq,.menu{color:rgba(0,0,0,.8)}
-b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
-b.button:before{content:"[";padding:0 3px 0 2px}
-b.button:after{content:"]";padding:0 2px 0 3px}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
 p a>code:hover{color:rgba(0,0,0,.9)}
 #header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
-#header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
-#header:after,#content:after,#footnotes:after,#footer:after{clear:both}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
 #content{margin-top:1.25em}
-#content:before{content:none}
+#content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
-#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
-#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
 #header .details br{display:none}
-#header .details br+span:before{content:"\00a0\2013\00a0"}
-#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
-#header .details br+span#revremark:before{content:"\00a0|\00a0"}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
 #header #revnumber{text-transform:capitalize}
-#header #revnumber:after{content:"\00a0"}
-#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
-#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
 #toc>ul{margin-left:.125em}
 #toc ul.sectlevel0>li>a{font-style:italic}
 #toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
@@ -163,16 +164,16 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toc a{text-decoration:none}
 #toc a:active{text-decoration:underline}
 #toctitle{color:#7a2518;font-size:1.2em}
-@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
-#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
 #toc.toc2 ul ul{margin-left:0;padding-left:1em}
 #toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
 body.toc2.toc-right{padding-left:0;padding-right:15em}
-body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
-@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
 #toc.toc2{width:20em}
 #toc.toc2 #toctitle{font-size:1.375em}
 #toc.toc2>ul{font-size:.95em}
@@ -181,89 +182,101 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
 #footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
-@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
-.sect1+.sect1{border-top:1px solid #efefed}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
 #content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
-#content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
 #content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
 #content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
 #content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
-.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
 .admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
-table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
-.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0,0,0,.85)}
-table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
 .exampleblock>.content>:last-child{margin-bottom:0}
-.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
 .sidebarblock>:first-child{margin-top:0}
 .sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
 .exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
-.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
-.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
-.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
-@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
-@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
-.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
 .listingblock pre.highlightjs{padding:0}
 .listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
 .listingblock pre.prettyprint{border-width:0}
-.listingblock>.content{position:relative}
-.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
-.listingblock:hover code[data-lang]:before{display:block}
-.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
-.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
-table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
-table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
-table.pyhltable td.code{padding-left:.75em;padding-right:0}
-pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
-pre.pygments .lineno{display:inline-block;margin-right:.25em}
-table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock{margin:0 1em 1.25em 1.5em;display:table}
-.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
-.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
 .quoteblock blockquote{margin:0;padding:0;border:0}
-.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
 .quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
-.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
-.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
-.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
-.quoteblock .quoteblock blockquote:before{display:none}
-.verseblock{margin:0 1em 1.25em 1em}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
 .verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
 .verseblock pre strong{font-weight:400}
 .verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
 .quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
 .quoteblock .attribution br,.verseblock .attribution br{display:none}
 .quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
-.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
-.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
-.quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
 table.tableblock{max-width:100%;border-collapse:separate}
-table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
-table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
-table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
-table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
-table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
-table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
-table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
 table.frame-all{border-width:1px}
 table.frame-sides{border-width:0 1px}
-table.frame-topbot{border-width:1px 0}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
 th.halign-center,td.halign-center{text-align:center}
@@ -275,19 +288,19 @@ tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
-td>div.verse{white-space:pre}
 ol{margin-left:1.75em}
 ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
 ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
-ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
-ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
-ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
-ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
-ul.inline>li>*{display:block}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
 .unstyled dl dt{font-weight:400;font-style:normal}
 ol.arabic{list-style-type:decimal}
 ol.decimal{list-style-type:decimal-leading-zero}
@@ -301,11 +314,12 @@ ol.lowergreek{list-style-type:lower-greek}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
-.colist>table tr>td:last-of-type{padding:.25em 0}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
 .thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
-.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
-.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
 .imageblock>.title{margin-bottom:0}
 .imageblock.thumb,.imageblock.th{border-width:6px}
 .imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
@@ -318,9 +332,9 @@ sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:sup
 sup.footnote a,sup.footnoteref a{text-decoration:none}
 sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
-#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
-#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
-#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
 #footnotes .footnote:last-of-type{margin-bottom:0}
 #content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
 .gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
@@ -332,48 +346,49 @@ div.unbreakable{page-break-inside:avoid}
 .overline{text-decoration:overline}
 .line-through{text-decoration:line-through}
 .aqua{color:#00bfbf}
-.aqua-background{background-color:#00fafa}
+.aqua-background{background:#00fafa}
 .black{color:#000}
-.black-background{background-color:#000}
+.black-background{background:#000}
 .blue{color:#0000bf}
-.blue-background{background-color:#0000fa}
+.blue-background{background:#0000fa}
 .fuchsia{color:#bf00bf}
-.fuchsia-background{background-color:#fa00fa}
+.fuchsia-background{background:#fa00fa}
 .gray{color:#606060}
-.gray-background{background-color:#7d7d7d}
+.gray-background{background:#7d7d7d}
 .green{color:#006000}
-.green-background{background-color:#007d00}
+.green-background{background:#007d00}
 .lime{color:#00bf00}
-.lime-background{background-color:#00fa00}
+.lime-background{background:#00fa00}
 .maroon{color:#600000}
-.maroon-background{background-color:#7d0000}
+.maroon-background{background:#7d0000}
 .navy{color:#000060}
-.navy-background{background-color:#00007d}
+.navy-background{background:#00007d}
 .olive{color:#606000}
-.olive-background{background-color:#7d7d00}
+.olive-background{background:#7d7d00}
 .purple{color:#600060}
-.purple-background{background-color:#7d007d}
+.purple-background{background:#7d007d}
 .red{color:#bf0000}
-.red-background{background-color:#fa0000}
+.red-background{background:#fa0000}
 .silver{color:#909090}
-.silver-background{background-color:#bcbcbc}
+.silver-background{background:#bcbcbc}
 .teal{color:#006060}
-.teal-background{background-color:#007d7d}
+.teal-background{background:#007d7d}
 .white{color:#bfbfbf}
-.white-background{background-color:#fafafa}
+.white-background{background:#fafafa}
 .yellow{color:#bfbf00}
-.yellow-background{background-color:#fafa00}
+.yellow-background{background:#fafa00}
 span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
-.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
-.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
-.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
-.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
-.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 .conum[data-value] *{color:#fff!important}
 .conum[data-value]+b{display:none}
-.conum[data-value]:after{content:attr(data-value)}
+.conum[data-value]::after{content:attr(data-value)}
 pre .conum[data-value]{position:relative;top:-.125em}
 b.conum *{color:inherit!important}
 .conum:not([data-value]):empty{display:none}
@@ -383,39 +398,42 @@ p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
 p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
-.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
 .print-only{display:none!important}
-@media print{@page{margin:1.25cm .75cm}
-*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
 a{color:inherit!important;text-decoration:underline!important}
 a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
-a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
-abbr[title]:after{content:" (" attr(title) ")"}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
 pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
 thead{display:table-header-group}
 svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
-#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
-.sect1{padding-bottom:0!important}
-.sect1+.sect1{border:0!important}
-#header>h1:first-child{margin-top:1.25rem}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
 body.book #header{text-align:center}
-body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
 body.book #header .details{border:0!important;display:block;padding:0!important}
 body.book #header .details span:first-child{margin-left:0!important}
 body.book #header .details br{display:block}
-body.book #header .details br+span:before{content:none!important}
+body.book #header .details br+span::before{content:none!important}
 body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
 body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
-.listingblock code[data-lang]:before{display:block}
-#footer{background:none!important;padding:0 .9375em}
-#footer-text{color:rgba(0,0,0,.6)!important;font-size:.9em}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
 .hide-on-print{display:none!important}
 .print-only{display:block!important}
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
 <body class="book">
@@ -426,7 +444,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div style="page-break-after: always;"></div>
-<table class="tableblock frame-none grid-none spread">
+<table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -466,7 +484,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-none grid-all spread">
+<table class="tableblock frame-none grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -476,7 +494,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-none grid-none spread">
+<table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -492,7 +510,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-none grid-all spread">
+<table class="tableblock frame-none grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -586,9 +604,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_topology_vocabulary_extension_relation_family">8.7. Topology Vocabulary Extension (relation_family)</a>
 <ul class="sectlevel3">
 <li><a href="#_parameters">8.7.1. Parameters</a></li>
-<li><a href="#_requirements_for_simple_features_relation_family_relation_family_simple_features">8.7.2. Requirements for Simple Features Relation Family (relation_family=Simple Features)</a></li>
-<li><a href="#_requirements_for_egenhofer_relation_family_relation_family_egenhofer">8.7.3. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</a></li>
-<li><a href="#_requirements_for_rcc8_relation_family_relation_family_rcc8">8.7.4. Requirements for RCC8 Relation Family (relation_family=RCC8)</a></li>
+<li><a href="#_requirements_for_simple_features_relation_family_relation_familysimple_features">8.7.2. Requirements for Simple Features Relation Family (relation_family=Simple Features)</a></li>
+<li><a href="#_requirements_for_egenhofer_relation_family_relation_familyegenhofer">8.7.3. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</a></li>
+<li><a href="#_requirements_for_rcc8_relation_family_relation_familyrcc8">8.7.4. Requirements for RCC8 Relation Family (relation_family=RCC8)</a></li>
 <li><a href="#_equivalent_rcc8_egenhofer_and_simple_features_topological_relations">8.7.5. Equivalent RCC8, Egenhofer and Simple Features Topological Relations</a></li>
 </ul>
 </li>
@@ -596,11 +614,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_parameters_2">8.8.1. Parameters</a></li>
 <li><a href="#_geometry_classes_and_properties">8.8.2. Geometry Classes and Properties</a></li>
-<li><a href="#_standard_properties_for_geo_geometry">8.8.3. Standard Properties for geo:Geometry</a></li>
-<li><a href="#_requirements_for_wkt_serialization_serialization_wkt">8.8.4. Requirements for WKT Serialization (serialization=WKT)</a></li>
-<li><a href="#_requirements_for_gml_serialization_serialization_gml">8.8.5. Requirements for GML Serialization (serialization=GML)</a></li>
-<li><a href="#_requirements_for_geojson_serialization_serialization_geojson">8.8.6. Requirements for GeoJSON Serialization (serialization=GEOJSON)</a></li>
-<li><a href="#_requirements_for_kml_serialization_serialization_kml">8.8.7. Requirements for KML Serialization (serialization=KML)</a></li>
+<li><a href="#_standard_properties_for_geogeometry">8.8.3. Standard Properties for geo:Geometry</a></li>
+<li><a href="#_requirements_for_wkt_serialization_serializationwkt">8.8.4. Requirements for WKT Serialization (serialization=WKT)</a></li>
+<li><a href="#_requirements_for_gml_serialization_serializationgml">8.8.5. Requirements for GML Serialization (serialization=GML)</a></li>
+<li><a href="#_requirements_for_geojson_serialization_serializationgeojson">8.8.6. Requirements for GeoJSON Serialization (serialization=GEOJSON)</a></li>
+<li><a href="#_requirements_for_kml_serialization_serializationkml">8.8.7. Requirements for KML Serialization (serialization=KML)</a></li>
 <li><a href="#_non_topological_query_functions">8.8.8. Non-topological Query Functions</a></li>
 </ul>
 </li>
@@ -608,42 +626,42 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_parameters_3">8.9.1. Parameters</a></li>
 <li><a href="#_common_query_functions">8.9.2. Common Query Functions</a></li>
-<li><a href="#_requirements_for_simple_features_relation_family_relation_family_simple_features_2">8.9.3. Requirements for Simple Features Relation Family (relation_family=Simple Features)</a></li>
-<li><a href="#_requirements_for_egenhofer_relation_family_relation_family_egenhofer_2">8.9.4. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</a></li>
+<li><a href="#_requirements_for_simple_features_relation_family_relation_familysimple_features_2">8.9.3. Requirements for Simple Features Relation Family (relation_family=Simple Features)</a></li>
+<li><a href="#_requirements_for_egenhofer_relation_family_relation_familyegenhofer_2">8.9.4. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</a></li>
 </ul>
 </li>
 <li><a href="#_rdfs_entailment_extension_relation_family_serialization_version">8.10. RDFS Entailment Extension (relation_family, serialization, version)</a>
 <ul class="sectlevel3">
 <li><a href="#_parameters_4">8.10.1. Parameters</a></li>
 <li><a href="#_common_requirements">8.10.2. Common Requirements</a></li>
-<li><a href="#_requirements_for_wkt_serialization_serialization_wkt_2">8.10.3. Requirements for WKT Serialization (serialization=WKT)</a></li>
-<li><a href="#_requirements_for_gml_serialization_serialization_gml_2">8.10.4. Requirements for GML Serialization (serialization=GML)</a></li>
+<li><a href="#_requirements_for_wkt_serialization_serializationwkt_2">8.10.3. Requirements for WKT Serialization (serialization=WKT)</a></li>
+<li><a href="#_requirements_for_gml_serialization_serializationgml_2">8.10.4. Requirements for GML Serialization (serialization=GML)</a></li>
 </ul>
 </li>
 <li><a href="#_query_rewrite_extension_relation_family_serialization_version">8.11. Query Rewrite Extension (relation_family, serialization, version)</a>
 <ul class="sectlevel3">
 <li><a href="#_parameters_5">8.11.1. Parameters</a></li>
-<li><a href="#_requirements_for_simple_features_relation_family_relation_family_simple_features_3">8.11.2. Requirements for Simple Features Relation Family (relation_family=Simple Features)</a></li>
-<li><a href="#_requirements_for_egenhofer_relation_family_relation_family_egenhofer_3">8.11.3. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</a></li>
-<li><a href="#_requirements_for_rcc8_relation_family_relation_family_rcc8_3">8.11.4. Requirements for RCC8 Relation Family (relation_family=RCC8)</a></li>
+<li><a href="#_requirements_for_simple_features_relation_family_relation_familysimple_features_3">8.11.2. Requirements for Simple Features Relation Family (relation_family=Simple Features)</a></li>
+<li><a href="#_requirements_for_egenhofer_relation_family_relation_familyegenhofer_3">8.11.3. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</a></li>
+<li><a href="#_requirements_for_rcc8_relation_family_relation_familyrcc8_3">8.11.4. Requirements for RCC8 Relation Family (relation_family=RCC8)</a></li>
 <li><a href="#_special_considerations">8.11.5. Special Considerations</a></li>
 </ul>
 </li>
 <li><a href="#_future_work">8.12. Future Work</a></li>
 <li><a href="#_annex_a">8.13. Annex A</a></li>
-<li><a href="#__normative">8.14. (normative)</a></li>
+<li><a href="#_normative">8.14. (normative)</a></li>
 <li><a href="#_abstract_test_suite">8.15. Abstract Test Suite</a>
 <ul class="sectlevel3">
-<li><a href="#_a_1_conformance_class_em_core_em">8.15.1. A.1 Conformance Class: <em>Core</em></a></li>
-<li><a href="#_a_2_conformance_class_topology_vocabulary_extension_relation_family_conformance_class_uri_code_conf_topology_vocab_extension_code">8.15.2. A.2 Conformance Class: Topology Vocabulary Extension (relation_family) Conformance Class URI: <code>/conf/topology-vocab-extension</code></a></li>
-<li><a href="#_a_3_conformance_class_geometry_extension_serialization_version_conformance_class_uri_conf_geometry_extension">8.15.3. A.3 Conformance Class: Geometry Extension (serialization, version) Conformance Class URI: `/conf/geometry-extension</a></li>
+<li><a href="#_a_1_conformance_class_core">8.15.1. A.1 Conformance Class: <em>Core</em></a></li>
+<li><a href="#_a_2_conformance_class_topology_vocabulary_extension_relation_family_conformance_class_uri_conftopology_vocab_extension">8.15.2. A.2 Conformance Class: Topology Vocabulary Extension (relation_family) Conformance Class URI: <code>/conf/topology-vocab-extension</code></a></li>
+<li><a href="#_a_3_conformance_class_geometry_extension_serialization_version_conformance_class_uri_confgeometry_extension">8.15.3. A.3 Conformance Class: Geometry Extension (serialization, version) Conformance Class URI: `/conf/geometry-extension</a></li>
 <li><a href="#_a_4_conformance_class_geometry_topology_extension_relation_family_serialization_version">8.15.4. A.4 Conformance Class: Geometry Topology Extension (relation_family, serialization, version)</a></li>
 <li><a href="#_a_5_conformance_class_rdfs_entailment_extension_relation_family_serialization_version">8.15.5. A.5 Conformance Class: RDFS Entailment Extension (relation_family, serialization, version)</a></li>
 <li><a href="#_a_6_conformance_class_query_rewrite_extension_relation_family_serialization_version">8.15.6. A.6 Conformance Class: Query Rewrite Extension (relation_family, serialization, version)</a></li>
 </ul>
 </li>
 <li><a href="#_annex_b">8.16. Annex B</a></li>
-<li><a href="#__informative">8.17. (informative)</a></li>
+<li><a href="#_informative">8.17. (informative)</a></li>
 <li><a href="#_geosparql_examples">8.18. GeoSPARQL Examples</a>
 <ul class="sectlevel3">
 <li><a href="#_b_1_example_data">8.18.1. B.1 Example Data</a></li>
@@ -653,7 +671,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#_bibliography">9. Bibliography</a></li>
+<li><a href="#_bibliography">Bibliography</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -698,7 +716,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>h) Ordnance Survey</p>
 </div>
 <div class="olist lowerroman">
-<ol class="lowerroman" type="i">
+<ol class="lowerroman">
 <li>
 <p>Raytheon Company</p>
 </li>
@@ -718,7 +736,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>All questions regarding this submission should be directed to the editor or the submitters:</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -745,7 +763,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>4. Revision history</h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -990,7 +1008,7 @@ triples that are derived based on RDF and RDFS semantics.</p>
 <div class="paragraph">
 <p>This document establishes several requirements classes and corresponding conformance classes. Any GeoSPARQL implementation claiming conformance with one of the conformance classes shall pass all the tests in the associated abstract test suite. Requirements and conformance test URIs defined in this document are relative to <code>http://www.opengis.net/spec/geosparql/1.0/</code>. Table 1 summarizes the conformance classes in GeoSPARQL. Many conformance classes are parameterized. For parameterized conformance classes, the list of parameters is given within parenthesis.</p>
 </div>
-<table class="tableblock frame-all grid-all">
+<table class="tableblock frame-all grid-all fit-content">
 <caption class="title">Table 1. Conformance Classes</caption>
 <colgroup>
 <col>
@@ -1089,7 +1107,7 @@ test suite</p></td>
 <div class="paragraph">
 <p>In this draft candidate standard, the following common acronyms are used:</p>
 </div>
-<table class="tableblock frame-none grid-none spread">
+<table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1155,7 +1173,7 @@ test suite</p></td>
 <div class="paragraph">
 <p>The following XML namespace prefixes are used throughout this document:</p>
 </div>
-<table class="tableblock frame-none grid-none spread">
+<table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1229,7 +1247,7 @@ The URI <code>ogc:asGeomLiteral</code> is used in requirement specifications as 
 </div>
 <div class="sect3">
 <h4 id="_sparql"><a class="anchor" href="#_sparql"></a>8.6.1. SPARQL</h4>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -1249,7 +1267,7 @@ The URI <code>ogc:asGeomLiteral</code> is used in requirement specifications as 
 <p>Two main classes are defined: <code>geo:SpatialObject</code> and <code>geo:Feature</code>. The class <code>geo:Feature</code> is equivalent to the UML class <code>GFI_Feature</code> defined in [8].</p>
 </div>
 <div class="sect4">
-<h5 id="_class_geo_spatialobject"><a class="anchor" href="#_class_geo_spatialobject"></a>8.6.2.1. Class: geo:SpatialObject</h5>
+<h5 id="_class_geospatialobject"><a class="anchor" href="#_class_geospatialobject"></a>8.6.2.1. Class: geo:SpatialObject</h5>
 <div class="paragraph">
 <p>The class <code>geo:SpatialObject</code> is defined by the following:</p>
 </div>
@@ -1264,7 +1282,7 @@ The URI <code>ogc:asGeomLiteral</code> is used in requirement specifications as 
                  and geometry"@en .</code></pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -1279,7 +1297,7 @@ The URI <code>ogc:asGeomLiteral</code> is used in requirement specifications as 
 </table>
 </div>
 <div class="sect4">
-<h5 id="_class_geo_feature"><a class="anchor" href="#_class_geo_feature"></a>8.6.2.2. Class: geo:Feature</h5>
+<h5 id="_class_geofeature"><a class="anchor" href="#_class_geofeature"></a>8.6.2.2. Class: geo:Feature</h5>
 <div class="paragraph">
 <p>The class <code>geo:Feature</code> is equivalent to the class <code>GFI_Feature</code> [8] and is defined by the following:</p>
 </div>
@@ -1296,7 +1314,7 @@ The URI <code>ogc:asGeomLiteral</code> is used in requirement specifications as 
                  and it is superclass of all feature types."@en .</code></pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -1330,11 +1348,11 @@ The URI <code>ogc:asGeomLiteral</code> is used in requirement specifications as 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_simple_features_relation_family_relation_family_simple_features"><a class="anchor" href="#_requirements_for_simple_features_relation_family_relation_family_simple_features"></a>8.7.2. Requirements for Simple Features Relation Family (relation_family=Simple Features)</h4>
+<h4 id="_requirements_for_simple_features_relation_family_relation_familysimple_features"><a class="anchor" href="#_requirements_for_simple_features_relation_family_relation_familysimple_features"></a>8.7.2. Requirements for Simple Features Relation Family (relation_family=Simple Features)</h4>
 <div class="paragraph">
 <p>This clause defines requirements for the <em>Simple Features</em> relation family.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -1350,7 +1368,7 @@ The URI <code>ogc:asGeomLiteral</code> is used in requirement specifications as 
 <div class="paragraph">
 <p>Topological relations in the <em>Simple Features</em> family are summarized in Table 1. Multi- row intersection patterns should be interpreted as a logical <code>OR</code> of each row.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. Simple Features Topological Relations</caption>
 <colgroup>
 <col style="width: 20%;">
@@ -1430,11 +1448,11 @@ L/A</code>; <code>(0********) for L/L</code></p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_egenhofer_relation_family_relation_family_egenhofer"><a class="anchor" href="#_requirements_for_egenhofer_relation_family_relation_family_egenhofer"></a>8.7.3. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</h4>
+<h4 id="_requirements_for_egenhofer_relation_family_relation_familyegenhofer"><a class="anchor" href="#_requirements_for_egenhofer_relation_family_relation_familyegenhofer"></a>8.7.3. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</h4>
 <div class="paragraph">
 <p>This clause defines requirements for the <em>Egenhofer</em> relation family. Consult references [2] and [3] for a more detailed discussion of <em>Egenhofer</em> relations.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -1450,7 +1468,7 @@ L/A</code>; <code>(0********) for L/L</code></p></td>
 <div class="paragraph">
 <p>Topological relations in the <em>Egenhofer</em> family are summarized in Table 2. Multi-row intersection patterns should be interpreted as a logical <code>OR</code> of each row.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 3. Egenhofer Topological Relations</caption>
 <colgroup>
 <col style="width: 20%;">
@@ -1529,11 +1547,11 @@ L/A</code>; <code>(0********) for L/L</code></p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_rcc8_relation_family_relation_family_rcc8"><a class="anchor" href="#_requirements_for_rcc8_relation_family_relation_family_rcc8"></a>8.7.4. Requirements for RCC8 Relation Family (relation_family=RCC8)</h4>
+<h4 id="_requirements_for_rcc8_relation_family_relation_familyrcc8"><a class="anchor" href="#_requirements_for_rcc8_relation_family_relation_familyrcc8"></a>8.7.4. Requirements for RCC8 Relation Family (relation_family=RCC8)</h4>
 <div class="paragraph">
 <p>This clause defines requirements for the <em>RCC8</em> relation family. Consult references [1] and [9] for a more detailed discussion of <em>RCC8</em> relations.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -1546,7 +1564,7 @@ L/A</code>; <code>(0********) for L/L</code></p></td>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 4. RCC8 Topological Relations</caption>
 <colgroup>
 <col style="width: 20%;">
@@ -1629,7 +1647,7 @@ L/A</code>; <code>(0********) for L/L</code></p></td>
 <div class="paragraph">
 <p>Table 4 summarizes the equivalences between <em>Egenhofer</em>, <em>RCC8</em> and <em>Simple Features</em> spatial relations for closed, non-empty regions. The symbol <code>+</code> denotes logical <code>OR</code>, and the symbol <code>¬</code> denotes negation.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 5. Equivalent Simple Features, RCC8 and Egenhofer relations</caption>
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1727,7 +1745,7 @@ literals and also the supported geometry types.</p>
 <p>A single root geometry class is defined: <code>geo:Geometry</code>. The class <code>geo:Geometry</code> is equivalent to the UML class <code>GM_Object</code> defined in [6]. In addition, properties are defined for describing geometry data and for associating geometries with features.</p>
 </div>
 <div class="sect4">
-<h5 id="_class_geo_geometry"><a class="anchor" href="#_class_geo_geometry"></a>8.8.2.1. Class: geo:Geometry</h5>
+<h5 id="_class_geogeometry"><a class="anchor" href="#_class_geogeometry"></a>8.8.2.1. Class: geo:Geometry</h5>
 <div class="paragraph">
 <p>The class <code>geo:Geometry</code> is equivalent to <code>GM_Object</code> [6] and is defined by the following:</p>
 </div>
@@ -1744,7 +1762,7 @@ literals and also the supported geometry types.</p>
                  and it is superclass of all geometry types."@en .</code></pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -1759,11 +1777,11 @@ literals and also the supported geometry types.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_standard_properties_for_geo_feature"><a class="anchor" href="#_standard_properties_for_geo_feature"></a>8.8.2.2. Standard Properties for geo:Feature</h5>
+<h5 id="_standard_properties_for_geofeature"><a class="anchor" href="#_standard_properties_for_geofeature"></a>8.8.2.2. Standard Properties for geo:Feature</h5>
 <div class="paragraph">
 <p>Properties are defined for associating geometries with features.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -1778,7 +1796,7 @@ literals and also the supported geometry types.</p>
 </tbody>
 </table>
 <div class="sect5">
-<h6 id="_property_geo_hasgeometry"><a class="anchor" href="#_property_geo_hasgeometry"></a>Property: geo:hasGeometry</h6>
+<h6 id="_property_geohasgeometry"><a class="anchor" href="#_property_geohasgeometry"></a>Property: geo:hasGeometry</h6>
 <div class="paragraph">
 <p>The property <code>geo:hasGeometry</code> is used to link a feature with a geometry that represents its spatial extent. A given feature may have many associated geometries.</p>
 </div>
@@ -1796,7 +1814,7 @@ literals and also the supported geometry types.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_property_geo_hasdefaultgeometry"><a class="anchor" href="#_property_geo_hasdefaultgeometry"></a>8.8.2.3. Property: geo:hasDefaultGeometry</h5>
+<h5 id="_property_geohasdefaultgeometry"><a class="anchor" href="#_property_geohasdefaultgeometry"></a>8.8.2.3. Property: geo:hasDefaultGeometry</h5>
 <div class="paragraph">
 <p>The property <code>geo:hasDefaultGeometry</code> is used to link a feature with its default geometry. The default geometry is the geometry that should be used for spatial calculations in the absence of a request for a specific geometry (e.g. in the case of query rewrite).</p>
 </div>
@@ -1830,11 +1848,11 @@ WHERE { :f1 geo:sfDisjoint :f1 }</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standard_properties_for_geo_geometry"><a class="anchor" href="#_standard_properties_for_geo_geometry"></a>8.8.3. Standard Properties for geo:Geometry</h4>
+<h4 id="_standard_properties_for_geogeometry"><a class="anchor" href="#_standard_properties_for_geogeometry"></a>8.8.3. Standard Properties for geo:Geometry</h4>
 <div class="paragraph">
 <p>Properties are defined for describing geometry metadata.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -1848,7 +1866,7 @@ WHERE { :f1 geo:sfDisjoint :f1 }</code></pre>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_property_geo_dimension"><a class="anchor" href="#_property_geo_dimension"></a>8.8.3.1. Property: geo:dimension</h5>
+<h5 id="_property_geodimension"><a class="anchor" href="#_property_geodimension"></a>8.8.3.1. Property: geo:dimension</h5>
 <div class="paragraph">
 <p>The dimension is the topological dimension of this geometric object, which must be less than or equal to the coordinate dimension. In non-homogeneous collections, this will return the largest topological dimension of the contained objects.</p>
 </div>
@@ -1868,7 +1886,7 @@ WHERE { :f1 geo:sfDisjoint :f1 }</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_property_geo_coordinatedimension"><a class="anchor" href="#_property_geo_coordinatedimension"></a>8.8.3.2. Property: geo:coordinateDimension</h5>
+<h5 id="_property_geocoordinatedimension"><a class="anchor" href="#_property_geocoordinatedimension"></a>8.8.3.2. Property: geo:coordinateDimension</h5>
 <div class="paragraph">
 <p>The coordinate dimension is the dimension of direct positions (coordinate tuples) used in the definition of this geometric object.</p>
 </div>
@@ -1886,7 +1904,7 @@ WHERE { :f1 geo:sfDisjoint :f1 }</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_property_geo_spatialdimension"><a class="anchor" href="#_property_geo_spatialdimension"></a>8.8.3.3. Property: geo:spatialDimension</h5>
+<h5 id="_property_geospatialdimension"><a class="anchor" href="#_property_geospatialdimension"></a>8.8.3.3. Property: geo:spatialDimension</h5>
 <div class="paragraph">
 <p>The spatial dimension is the dimension of the spatial portion of the direct positions (coordinate tuples) used in the definition of this geometric object. If the direct positions do not carry a measure coordinate, this will be equal to the coordinate dimension.</p>
 </div>
@@ -1904,7 +1922,7 @@ WHERE { :f1 geo:sfDisjoint :f1 }</code></pre>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_property_geo_isempty"><a class="anchor" href="#_property_geo_isempty"></a>Property: geo:isEmpty</h6>
+<h6 id="_property_geoisempty"><a class="anchor" href="#_property_geoisempty"></a>Property: geo:isEmpty</h6>
 <div class="paragraph">
 <p>The <code>geo:isEmpty</code> Boolean will be set to true only if the geometry contains no points.</p>
 </div>
@@ -1922,7 +1940,7 @@ WHERE { :f1 geo:sfDisjoint :f1 }</code></pre>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_property_geo_issimple"><a class="anchor" href="#_property_geo_issimple"></a>Property: geo:isSimple</h6>
+<h6 id="_property_geoissimple"><a class="anchor" href="#_property_geoissimple"></a>Property: geo:isSimple</h6>
 <div class="paragraph">
 <p>The <code>geo:isSimple</code> Boolean will be set to true, only if the geometry contains no self- intersections, with the possible exception of its boundary.</p>
 </div>
@@ -1941,7 +1959,7 @@ WHERE { :f1 geo:sfDisjoint :f1 }</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_property_geo_hasserialization"><a class="anchor" href="#_property_geo_hasserialization"></a>8.8.3.4. Property: geo:hasSerialization</h5>
+<h5 id="_property_geohasserialization"><a class="anchor" href="#_property_geohasserialization"></a>8.8.3.4. Property: geo:hasSerialization</h5>
 <div class="paragraph">
 <p>The <code>geo:hasSerialization</code> property is used to connect a geometry with its text- based serialization (e.g., its WKT serialization).</p>
 </div>
@@ -1960,7 +1978,7 @@ WHERE { :f1 geo:sfDisjoint :f1 }</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_wkt_serialization_serialization_wkt"><a class="anchor" href="#_requirements_for_wkt_serialization_serialization_wkt"></a>8.8.4. Requirements for WKT Serialization (serialization=WKT)</h4>
+<h4 id="_requirements_for_wkt_serialization_serializationwkt"><a class="anchor" href="#_requirements_for_wkt_serialization_serializationwkt"></a>8.8.4. Requirements for WKT Serialization (serialization=WKT)</h4>
 <div class="paragraph">
 <p>This section establishes the requirements for representing geometry data in RDF based on WKT as defined by Simple Features [ISO 19125-1].</p>
 </div>
@@ -1980,7 +1998,7 @@ WHERE { :f1 geo:sfDisjoint :f1 }</code></pre>
     rdfs:comment "A Well-known Text serialization of a geometry object."@en .</code></pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2002,7 +2020,7 @@ following spatial reference system URI will be assumed:
 <code>&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt;</code>
 This URI denotes WGS 84 longitude-latitude.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2015,7 +2033,7 @@ This URI denotes WGS 84 longitude-latitude.</p>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2045,7 +2063,7 @@ This URI denotes WGS 84 longitude-latitude.</p>
 Point(33.95 -83.38)"^^&lt;http://www.opengis.net/ont/geosparql#wktLiteral&gt;</code></pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2067,7 +2085,7 @@ Point(33.95 -83.38)"^^&lt;http://www.opengis.net/ont/geosparql#wktLiteral&gt;</c
 <div class="paragraph">
 <p><strong>Property: geo:asWKT</strong></p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2098,7 +2116,7 @@ Point(33.95 -83.38)"^^&lt;http://www.opengis.net/ont/geosparql#wktLiteral&gt;</c
 </div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_gml_serialization_serialization_gml"><a class="anchor" href="#_requirements_for_gml_serialization_serialization_gml"></a>8.8.5. Requirements for GML Serialization (serialization=GML)</h4>
+<h4 id="_requirements_for_gml_serialization_serializationgml"><a class="anchor" href="#_requirements_for_gml_serialization_serializationgml"></a>8.8.5. Requirements for GML Serialization (serialization=GML)</h4>
 <div class="paragraph">
 <p>This section establishes requirements for representing geometry data in RDF based on GML as defined by Geography Markup Language Encoding Standard [OGC 07-036].</p>
 </div>
@@ -2122,7 +2140,7 @@ Point(33.95 -83.38)"^^&lt;http://www.opengis.net/ont/geosparql#wktLiteral&gt;</c
 <div class="paragraph">
 <p>Valid <code>geo:gmlLiteral`s are formed by encoding geometry information as a valid element from the GML schema that implements a subtype of `GM_Object</code>. For example, in GML 3.2.1 this is every element directly or indirectly in the substitution group of the element <code>{http://www.opengis.net/ont/gml/3.2}AbstractGeometry</code>. In GML 3.1.1 and GML 2.1.2 this is every element directly or indirectly in the substitution group of the element <code>{http://www.opengis.net/ont/gml}_Geometry</code>.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2148,7 +2166,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 &lt;/gml:Point&gt;"^^&lt;http://www.opengis.net/ont/geosparql#gmlLiteral&gt;</code></pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2161,7 +2179,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2183,7 +2201,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 <div class="paragraph">
 <p><strong>Property: geo:asGML</strong></p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2213,7 +2231,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_geojson_serialization_serialization_geojson"><a class="anchor" href="#_requirements_for_geojson_serialization_serialization_geojson"></a>8.8.6. Requirements for GeoJSON Serialization (serialization=GEOJSON)</h4>
+<h4 id="_requirements_for_geojson_serialization_serializationgeojson"><a class="anchor" href="#_requirements_for_geojson_serialization_serializationgeojson"></a>8.8.6. Requirements for GeoJSON Serialization (serialization=GEOJSON)</h4>
 <div class="paragraph">
 <p>This section establishes the requirements for representing geometry data in RDF based on GeoJSON.</p>
 </div>
@@ -2236,7 +2254,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 <div class="paragraph">
 <p>Valid `geo:geoJSONLiteral`s are formed by encoding geometry information as a Geometry object as defined in the GeoJSON specification [RFC 7946].</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2249,7 +2267,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2270,7 +2288,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 <pre class="highlight"><code>"{\"type\":\"Point\", \"coordinates\":[-83.38,33.95]}"^^&lt;http://www.opengis.net/ont/geosparql#geoJSONLiteral&gt;</code></pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2292,7 +2310,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 <div class="paragraph">
 <p><strong>Property: geo:asGeoJSON</strong></p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2323,7 +2341,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_kml_serialization_serialization_kml"><a class="anchor" href="#_requirements_for_kml_serialization_serialization_kml"></a>8.8.7. Requirements for KML Serialization (serialization=KML)</h4>
+<h4 id="_requirements_for_kml_serialization_serializationkml"><a class="anchor" href="#_requirements_for_kml_serialization_serializationkml"></a>8.8.7. Requirements for KML Serialization (serialization=KML)</h4>
 <div class="paragraph">
 <p>This section establishes the requirements for representing geometry data in RDF based on KML.</p>
 </div>
@@ -2346,7 +2364,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 <div class="paragraph">
 <p>Valid `geo:kmlLiteral`s are formed by encoding geometry information as a Geometry object as defined in the KML specification [<a href="https://www.ogc.org/standards/kml/" class="bare">https://www.ogc.org/standards/kml/</a>].</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2359,7 +2377,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2380,7 +2398,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 <pre class="highlight"><code>"&lt;Point xmlns=\"http://www.opengis.net/kml/2.2\"&gt;&lt;coordinates&gt;-83.38,33.95&lt;/coordinates&gt;&lt;/Point&gt;"^^&lt;http://www.opengis.net/ont/geosparql#kmlLiteral&gt;</code></pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2402,7 +2420,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 <div class="paragraph">
 <p><strong>Property: geo:asKML</strong></p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2437,7 +2455,7 @@ geodetic longitude-latitude spatial reference system using GML version 3.2:</p>
 <div class="paragraph">
 <p>This clause defines SPARQL functions for performing non-topological spatial operations.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2490,7 +2508,7 @@ SPARQL language extensions may provide additional associations between operators
 <p>Several non-topological query functions use a unit of measure URI. The OGC has defined some standard units of measure URIs under the <code>http://www.opengis.net/def/uom/OGC/1.0/</code> namespace, for example <code>&lt;http://www.opengis.net/def/uom/OGC/1.0/metre&gt;</code>.</p>
 </div>
 <div class="sect4">
-<h5 id="_function_geof_distance"><a class="anchor" href="#_function_geof_distance"></a>8.8.8.1. Function: geof:distance</h5>
+<h5 id="_function_geofdistance"><a class="anchor" href="#_function_geofdistance"></a>8.8.8.1. Function: geof:distance</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>geof:distance (geom1: ogc:geomLiteral, geom2: ogc:geomLiteral,
@@ -2503,7 +2521,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_function_geof_buffer"><a class="anchor" href="#_function_geof_buffer"></a>8.8.8.2. Function: geof:buffer</h5>
+<h5 id="_function_geofbuffer"><a class="anchor" href="#_function_geofbuffer"></a>8.8.8.2. Function: geof:buffer</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>geof:buffer (geom: ogc:geomLiteral, radius: xsd:double,
@@ -2515,7 +2533,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_function_geof_convexhull"><a class="anchor" href="#_function_geof_convexhull"></a>8.8.8.3. Function: geof:convexHull</h5>
+<h5 id="_function_geofconvexhull"><a class="anchor" href="#_function_geofconvexhull"></a>8.8.8.3. Function: geof:convexHull</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>geof:convexHull (geom1: ogc:geomLiteral): ogc:geomLiteral</code></pre>
@@ -2526,7 +2544,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_function_geof_intersection"><a class="anchor" href="#_function_geof_intersection"></a>8.8.8.4. Function: geof:intersection</h5>
+<h5 id="_function_geofintersection"><a class="anchor" href="#_function_geofintersection"></a>8.8.8.4. Function: geof:intersection</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>geof:intersection (geom1: ogc:geomLiteral,
@@ -2538,7 +2556,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_function_geof_union"><a class="anchor" href="#_function_geof_union"></a>8.8.8.5. Function: geof:union</h5>
+<h5 id="_function_geofunion"><a class="anchor" href="#_function_geofunion"></a>8.8.8.5. Function: geof:union</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>geof:union (geom1: ogc:geomLiteral, geom2: ogc:geomLiteral,
@@ -2550,7 +2568,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_function_geof_difference"><a class="anchor" href="#_function_geof_difference"></a>8.8.8.6. Function: geof:difference</h5>
+<h5 id="_function_geofdifference"><a class="anchor" href="#_function_geofdifference"></a>8.8.8.6. Function: geof:difference</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>geof:difference (geom1: ogc:geomLiteral, geom2: ogc:geomLiteral,
@@ -2562,7 +2580,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_function_geof_symdifference"><a class="anchor" href="#_function_geof_symdifference"></a>8.8.8.7. Function: geof:symDifference</h5>
+<h5 id="_function_geofsymdifference"><a class="anchor" href="#_function_geofsymdifference"></a>8.8.8.7. Function: geof:symDifference</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>geof:symDifference (geom1: ogc:geomLiteral,
@@ -2575,7 +2593,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_function_geof_envelope"><a class="anchor" href="#_function_geof_envelope"></a>8.8.8.8. Function: geof:envelope</h5>
+<h5 id="_function_geofenvelope"><a class="anchor" href="#_function_geofenvelope"></a>8.8.8.8. Function: geof:envelope</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>geof:envelope (geom1: ogc:geomLiteral): ogc:geomLiteral</code></pre>
@@ -2586,7 +2604,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_function_geof_boundary"><a class="anchor" href="#_function_geof_boundary"></a>8.8.8.9. Function: geof:boundary</h5>
+<h5 id="_function_geofboundary"><a class="anchor" href="#_function_geofboundary"></a>8.8.8.9. Function: geof:boundary</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>geof:boundary (geom1: ogc:geomLiteral): ogc:geomLiteral</code></pre>
@@ -2595,7 +2613,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 <div class="paragraph">
 <p>This function returns the closure of the boundary of <code>geom1</code>. Calculations are in the spatial reference system of <code>geom1</code>.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2610,7 +2628,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_function_geof_getsrid"><a class="anchor" href="#_function_geof_getsrid"></a>8.8.8.10. Function: geof:getsrid</h5>
+<h5 id="_function_geofgetsrid"><a class="anchor" href="#_function_geofgetsrid"></a>8.8.8.10. Function: geof:getsrid</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>geof:getSRID (geom: ogc:geomLiteral): xsd:anyURI</code></pre>
@@ -2644,7 +2662,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 <div class="sect3">
 <h4 id="_common_query_functions"><a class="anchor" href="#_common_query_functions"></a>8.9.2. Common Query Functions</h4>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2668,11 +2686,11 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_simple_features_relation_family_relation_family_simple_features_2"><a class="anchor" href="#_requirements_for_simple_features_relation_family_relation_family_simple_features_2"></a>8.9.3. Requirements for Simple Features Relation Family (relation_family=Simple Features)</h4>
+<h4 id="_requirements_for_simple_features_relation_family_relation_familysimple_features_2"><a class="anchor" href="#_requirements_for_simple_features_relation_family_relation_familysimple_features_2"></a>8.9.3. Requirements for Simple Features Relation Family (relation_family=Simple Features)</h4>
 <div class="paragraph">
 <p>This clause establishes requirements for the <em>Simple Features</em> relation family.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2688,7 +2706,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 <div class="paragraph">
 <p>Boolean query functions defined for the Simple Features relation family, along with their associated DE-9IM intersection patterns, are shown in Table 5 below. Multi-row intersection patterns should be interpreted as a logical OR of each row. Each function accepts two arguments (<code>geom1</code> and <code>geom2</code>) of the geometry literal <em>serialization</em> type <em>specified</em> by serialization and version. Each function returns an <code>xsd:boolean</code> value of <code>true</code> if the specified relation exists between <code>geom1</code> and <code>geom2</code> and returns false otherwise. In each case, the spatial reference system of <code>geom1</code> is used for spatial calculations.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 6. Simple Features Query Functions</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -2753,11 +2771,11 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_egenhofer_relation_family_relation_family_egenhofer_2"><a class="anchor" href="#_requirements_for_egenhofer_relation_family_relation_family_egenhofer_2"></a>8.9.4. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</h4>
+<h4 id="_requirements_for_egenhofer_relation_family_relation_familyegenhofer_2"><a class="anchor" href="#_requirements_for_egenhofer_relation_family_relation_familyegenhofer_2"></a>8.9.4. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</h4>
 <div class="paragraph">
 <p>This clause establishes requirements for the <em>Egenhofer</em> relation family. Consult references [2] and [3] for a more detailed discussion of <em>Egenhofer</em> relations.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2773,7 +2791,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 <div class="paragraph">
 <p>Boolean query functions defined for the <em>Egenhofer</em> relation family, along with their associated DE-9IM intersection patterns, are shown in Table 6 below. Multi-row intersection patterns should be interpreted as a logical OR of each row. Each function accepts two arguments (<code>geom1</code> and <code>geom2</code>) of the geometry literal serialization type specified by <em>serialization</em> and <em>version</em>. Each function returns an <code>xsd:boolean</code> value of <code>true</code> if the specified relation exists between <code>geom1</code> and <code>geom2</code> and returns <code>false</code> otherwise. In each case, the spatial reference system of geom1 is used for spatial calculations.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 7. Egenhofer Query Functions</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -2837,11 +2855,11 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </tbody>
 </table>
 <div class="sect4">
-<h5 id="_requirements_for_rcc8_relation_family_relation_family_rcc8_2"><a class="anchor" href="#_requirements_for_rcc8_relation_family_relation_family_rcc8_2"></a>8.9.4.1. Requirements for RCC8 Relation Family (relation_family=RCC8)</h5>
+<h5 id="_requirements_for_rcc8_relation_family_relation_familyrcc8_2"><a class="anchor" href="#_requirements_for_rcc8_relation_family_relation_familyrcc8_2"></a>8.9.4.1. Requirements for RCC8 Relation Family (relation_family=RCC8)</h5>
 <div class="paragraph">
 <p>This clause establishes requirements for the <em>RCC8</em> relation family. Consult references [1] and [9] for a more detailed discussion of <em>RCC8</em> relations.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2857,7 +2875,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 <div class="paragraph">
 <p>Boolean query functions defined for the <em>RCC8</em> relation family, along with their associated DE-9IM intersection patterns, are shown in Table 7 below. Each function accepts two arguments (<code>geom1</code> and <code>geom2</code>) of the geometry literal serialization type specified by <em>serialization</em> and <em>version</em>. Each function returns an <code>xsd:boolean</code> value of <code>true</code> if the specified relation exists between <code>geom1</code> and <code>geom2</code> and returns <code>false</code> otherwise. In each case, the spatial reference system of geom1 is used for spatial calculations.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 8. RCC8 Query Functions</caption>
 <colgroup>
 <col style="width: 50%;">
@@ -2945,7 +2963,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 <div class="paragraph">
 <p>The basic mechanism for supporting RDFS entailment has been defined by the W3C SPARQL 1.1 RDFS Entailment Regime [W3C SPARQL Entailment].</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2960,7 +2978,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_wkt_serialization_serialization_wkt_2"><a class="anchor" href="#_requirements_for_wkt_serialization_serialization_wkt_2"></a>8.10.3. Requirements for WKT Serialization (serialization=WKT)</h4>
+<h4 id="_requirements_for_wkt_serialization_serializationwkt_2"><a class="anchor" href="#_requirements_for_wkt_serialization_serializationwkt_2"></a>8.10.3. Requirements for WKT Serialization (serialization=WKT)</h4>
 <div class="paragraph">
 <p>This section establishes the requirements for representing geometry data in RDF based on WKT as defined by Simple Features [ISO 19125-1].</p>
 </div>
@@ -2983,7 +3001,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
                   more interior boundaries"@en .</code></pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -2999,7 +3017,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_gml_serialization_serialization_gml_2"><a class="anchor" href="#_requirements_for_gml_serialization_serialization_gml_2"></a>8.10.4. Requirements for GML Serialization (serialization=GML)</h4>
+<h4 id="_requirements_for_gml_serialization_serializationgml_2"><a class="anchor" href="#_requirements_for_gml_serialization_serializationgml_2"></a>8.10.4. Requirements for GML Serialization (serialization=GML)</h4>
 <div class="paragraph">
 <p>This section establishes requirements for representing geometry data in RDF based on GML as defined by Geography Markup Language Encoding Standard [OGC 07-036].</p>
 </div>
@@ -3022,7 +3040,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
                   more interior boundaries."@en .</code></pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -3092,11 +3110,11 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_simple_features_relation_family_relation_family_simple_features_3"><a class="anchor" href="#_requirements_for_simple_features_relation_family_relation_family_simple_features_3"></a>8.11.2. Requirements for Simple Features Relation Family (relation_family=Simple Features)</h4>
+<h4 id="_requirements_for_simple_features_relation_family_relation_familysimple_features_3"><a class="anchor" href="#_requirements_for_simple_features_relation_family_relation_familysimple_features_3"></a>8.11.2. Requirements for Simple Features Relation Family (relation_family=Simple Features)</h4>
 <div class="paragraph">
 <p>This clause defines requirements for the <em>Simple Features</em> relation family. Table 8 specifies the function and property substitutions for each rule in the <em>Simple Features</em> relation family.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -3109,7 +3127,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 9. Simple Features Query Transformation Rules</caption>
 <colgroup>
 <col style="width: 33.3333%;">
@@ -3168,8 +3186,8 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_egenhofer_relation_family_relation_family_egenhofer_3"><a class="anchor" href="#_requirements_for_egenhofer_relation_family_relation_family_egenhofer_3"></a>8.11.3. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</h4>
-<table class="tableblock frame-all grid-all spread">
+<h4 id="_requirements_for_egenhofer_relation_family_relation_familyegenhofer_3"><a class="anchor" href="#_requirements_for_egenhofer_relation_family_relation_familyegenhofer_3"></a>8.11.3. Requirements for Egenhofer Relation Family (relation_family=Egenhofer)</h4>
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -3183,7 +3201,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 10. Simple Features Query Transformation Rules</caption>
 <colgroup>
 <col style="width: 33.3333%;">
@@ -3242,11 +3260,11 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_requirements_for_rcc8_relation_family_relation_family_rcc8_3"><a class="anchor" href="#_requirements_for_rcc8_relation_family_relation_family_rcc8_3"></a>8.11.4. Requirements for RCC8 Relation Family (relation_family=RCC8)</h4>
+<h4 id="_requirements_for_rcc8_relation_family_relation_familyrcc8_3"><a class="anchor" href="#_requirements_for_rcc8_relation_family_relation_familyrcc8_3"></a>8.11.4. Requirements for RCC8 Relation Family (relation_family=RCC8)</h4>
 <div class="paragraph">
 <p>This clause defines requirements for the <em>RCC8</em> relation family. Table 10 specifies the function and property substitutions for each rule in the <em>RCC8</em> relation family.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -3259,7 +3277,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 11. Simple Features Query Transformation Rules</caption>
 <colgroup>
 <col style="width: 33.3333%;">
@@ -3349,18 +3367,18 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 
 </div>
 <div class="sect2">
-<h3 id="__normative"><a class="anchor" href="#__normative"></a>8.14. (normative)</h3>
+<h3 id="_normative"><a class="anchor" href="#_normative"></a>8.14. (normative)</h3>
 
 </div>
 <div class="sect2">
 <h3 id="_abstract_test_suite"><a class="anchor" href="#_abstract_test_suite"></a>8.15. Abstract Test Suite</h3>
 <div class="sect3">
-<h4 id="_a_1_conformance_class_em_core_em"><a class="anchor" href="#_a_1_conformance_class_em_core_em"></a>8.15.1. A.1 Conformance Class: <em>Core</em></h4>
+<h4 id="_a_1_conformance_class_core"><a class="anchor" href="#_a_1_conformance_class_core"></a>8.15.1. A.1 Conformance Class: <em>Core</em></h4>
 <div class="paragraph">
 <p><strong>Conformance Class URI</strong>: <code>/conf/core</code></p>
 </div>
 <div class="sect4">
-<h5 id="_a_1_1_code_conf_core_sparql_protocol_code"><a class="anchor" href="#_a_1_1_code_conf_core_sparql_protocol_code"></a>8.15.1.1. A.1.1 <code>/conf/core/sparql-protocol</code></h5>
+<h5 id="_a_1_1_confcoresparql_protocol"><a class="anchor" href="#_a_1_1_confcoresparql_protocol"></a>8.15.1.1. A.1.1 <code>/conf/core/sparql-protocol</code></h5>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/core/sparql-protocol</code></p>
 </div>
@@ -3381,7 +3399,7 @@ objects as calculated in the spatial reference system of <code>geom1</code>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_a_1_2_code_conf_core_spatial_object_class_code"><a class="anchor" href="#_a_1_2_code_conf_core_spatial_object_class_code"></a>8.15.1.2. A.1.2 <code>/conf/core/spatial-object-class</code></h5>
+<h5 id="_a_1_2_confcorespatial_object_class"><a class="anchor" href="#_a_1_2_confcorespatial_object_class"></a>8.15.1.2. A.1.2 <code>/conf/core/spatial-object-class</code></h5>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/core/spatial-object-class</code></p>
 </div>
@@ -3400,7 +3418,7 @@ patterns.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_a_1_3_code_conf_core_feature_class_code"><a class="anchor" href="#_a_1_3_code_conf_core_feature_class_code"></a>8.15.1.3. A.1.3 <code>/conf/core/feature-class</code></h5>
+<h5 id="_a_1_3_confcorefeature_class"><a class="anchor" href="#_a_1_3_confcorefeature_class"></a>8.15.1.3. A.1.3 <code>/conf/core/feature-class</code></h5>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/core/feature-class</code>
 Implementations shall allow the RDFS class geo:Feature to be used in SPARQL graph patterns.</p>
@@ -3420,11 +3438,11 @@ Implementations shall allow the RDFS class geo:Feature to be used in SPARQL grap
 </div>
 </div>
 <div class="sect3">
-<h4 id="_a_2_conformance_class_topology_vocabulary_extension_relation_family_conformance_class_uri_code_conf_topology_vocab_extension_code"><a class="anchor" href="#_a_2_conformance_class_topology_vocabulary_extension_relation_family_conformance_class_uri_code_conf_topology_vocab_extension_code"></a>8.15.2. A.2 Conformance Class: Topology Vocabulary Extension (relation_family) Conformance Class URI: <code>/conf/topology-vocab-extension</code></h4>
+<h4 id="_a_2_conformance_class_topology_vocabulary_extension_relation_family_conformance_class_uri_conftopology_vocab_extension"><a class="anchor" href="#_a_2_conformance_class_topology_vocabulary_extension_relation_family_conformance_class_uri_conftopology_vocab_extension"></a>8.15.2. A.2 Conformance Class: Topology Vocabulary Extension (relation_family) Conformance Class URI: <code>/conf/topology-vocab-extension</code></h4>
 <div class="sect4">
 <h5 id="_a_2_1_relation_family_simple_features"><a class="anchor" href="#_a_2_1_relation_family_simple_features"></a>8.15.2.1. A.2.1 relation_family = Simple Features</h5>
 <div class="sect5">
-<h6 id="_a_2_1_1_code_conf_topology_vocab_extension_sf_spatial_relations_code"><a class="anchor" href="#_a_2_1_1_code_conf_topology_vocab_extension_sf_spatial_relations_code"></a>A.2.1.1 <code>/conf/topology-vocab-extension/sf-spatial-relations</code></h6>
+<h6 id="_a_2_1_1_conftopology_vocab_extensionsf_spatial_relations"><a class="anchor" href="#_a_2_1_1_conftopology_vocab_extensionsf_spatial_relations"></a>A.2.1.1 <code>/conf/topology-vocab-extension/sf-spatial-relations</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/topology-vocab-extension/sf-spatial-relations</code>
 Implementations shall allow the properties <code>geo:sfEquals</code>, <code>geo:sfDisjoint</code>, <code>geo:sfIntersects</code>, <code>geo:sfTouches</code>, <code>geo:sfCrosses</code>, <code>geo:sfWithin</code>, <code>geo:sfContains</code>, <code>geo:sfOverlaps</code> to be used in SPARQL graph patterns.</p>
@@ -3446,7 +3464,7 @@ Implementations shall allow the properties <code>geo:sfEquals</code>, <code>geo:
 <div class="sect4">
 <h5 id="_a_2_2_relation_family_egenhofer"><a class="anchor" href="#_a_2_2_relation_family_egenhofer"></a>8.15.2.2. A.2.2 relation_family = Egenhofer</h5>
 <div class="sect5">
-<h6 id="_a_2_2_1_code_conf_topology_vocab_extension_eh_spatial_relations_code"><a class="anchor" href="#_a_2_2_1_code_conf_topology_vocab_extension_eh_spatial_relations_code"></a>A.2.2.1 <code>/conf/topology-vocab-extension/eh-spatial-relations</code></h6>
+<h6 id="_a_2_2_1_conftopology_vocab_extensioneh_spatial_relations"><a class="anchor" href="#_a_2_2_1_conftopology_vocab_extensioneh_spatial_relations"></a>A.2.2.1 <code>/conf/topology-vocab-extension/eh-spatial-relations</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/topology-vocab-extension/eh-spatial-relations</code>
 Implementations shall allow the properties <code>geo:ehEquals</code>, <code>geo:ehDisjoint</code>, <code>geo:ehMeet</code>, <code>geo:ehOverlap</code>, <code>geo:ehCovers</code>, <code>geo:ehCoveredBy</code>, <code>geo:ehInside</code>, <code>geo:ehContains</code> to be used in SPARQL graph patterns.</p>
@@ -3468,7 +3486,7 @@ Implementations shall allow the properties <code>geo:ehEquals</code>, <code>geo:
 <div class="sect4">
 <h5 id="_a_2_3_relation_family_rcc8"><a class="anchor" href="#_a_2_3_relation_family_rcc8"></a>8.15.2.3. A.2.3 relation_family = RCC8</h5>
 <div class="sect5">
-<h6 id="_a_2_3_1_code_conf_topology_vocab_extension_rcc8_spatial_relations_code"><a class="anchor" href="#_a_2_3_1_code_conf_topology_vocab_extension_rcc8_spatial_relations_code"></a>A.2.3.1 <code>/conf/topology-vocab-extension/rcc8-spatial-relations</code></h6>
+<h6 id="_a_2_3_1_conftopology_vocab_extensionrcc8_spatial_relations"><a class="anchor" href="#_a_2_3_1_conftopology_vocab_extensionrcc8_spatial_relations"></a>A.2.3.1 <code>/conf/topology-vocab-extension/rcc8-spatial-relations</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/topology-vocab-extension/rcc8-spatial-relations Implementations shall allow the properties `geo:rcc8eq</code>, <code>geo:rcc8dc</code>, <code>geo:rcc8ec</code>, <code>geo:rcc8po</code>, <code>geo:rcc8tppi</code>, <code>geo:rcc8tpp</code>, <code>geo:rcc8ntpp</code>, `geo:rcc8ntppi
 to be used in SPARQL graph patterns</p>
@@ -3489,11 +3507,11 @@ to be used in SPARQL graph patterns</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_a_3_conformance_class_geometry_extension_serialization_version_conformance_class_uri_conf_geometry_extension"><a class="anchor" href="#_a_3_conformance_class_geometry_extension_serialization_version_conformance_class_uri_conf_geometry_extension"></a>8.15.3. A.3 Conformance Class: Geometry Extension (serialization, version) Conformance Class URI: `/conf/geometry-extension</h4>
+<h4 id="_a_3_conformance_class_geometry_extension_serialization_version_conformance_class_uri_confgeometry_extension"><a class="anchor" href="#_a_3_conformance_class_geometry_extension_serialization_version_conformance_class_uri_confgeometry_extension"></a>8.15.3. A.3 Conformance Class: Geometry Extension (serialization, version) Conformance Class URI: `/conf/geometry-extension</h4>
 <div class="sect4">
 <h5 id="_a_3_1_tests_for_all_serializations"><a class="anchor" href="#_a_3_1_tests_for_all_serializations"></a>8.15.3.1. A.3.1 Tests for all Serializations</h5>
 <div class="sect5">
-<h6 id="_a_3_1_1_code_conf_geometry_extension_geometry_class_code"><a class="anchor" href="#_a_3_1_1_code_conf_geometry_extension_geometry_class_code"></a>A.3.1.1 <code>/conf/geometry-extension/geometry-class</code></h6>
+<h6 id="_a_3_1_1_confgeometry_extensiongeometry_class"><a class="anchor" href="#_a_3_1_1_confgeometry_extensiongeometry_class"></a>A.3.1.1 <code>/conf/geometry-extension/geometry-class</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/geometry-class</code>
 Implementations shall allow the RDFS class geo:Geometry to be used in SPARQL graph patterns.</p>
@@ -3509,7 +3527,7 @@ Implementations shall allow the RDFS class geo:Geometry to be used in SPARQL gra
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_1_2_code_conf_geometry_extension_feature_properties_code"><a class="anchor" href="#_a_3_1_2_code_conf_geometry_extension_feature_properties_code"></a>A.3.1.2 <code>/conf/geometry-extension/feature-properties</code></h6>
+<h6 id="_a_3_1_2_confgeometry_extensionfeature_properties"><a class="anchor" href="#_a_3_1_2_confgeometry_extensionfeature_properties"></a>A.3.1.2 <code>/conf/geometry-extension/feature-properties</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/feature-properties</code>
 Implementations shall allow the properties <code>geo:hasGeometry</code> and <code>geo:hasDefaultGeometry</code> to be used in SPARQL graph patterns.</p>
@@ -3528,7 +3546,7 @@ Implementations shall allow the properties <code>geo:hasGeometry</code> and <cod
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_1_3_code_conf_geometry_extension_geometry_properties_code"><a class="anchor" href="#_a_3_1_3_code_conf_geometry_extension_geometry_properties_code"></a>A.3.1.3 <code>/conf/geometry-extension/geometry-properties</code></h6>
+<h6 id="_a_3_1_3_confgeometry_extensiongeometry_properties"><a class="anchor" href="#_a_3_1_3_confgeometry_extensiongeometry_properties"></a>A.3.1.3 <code>/conf/geometry-extension/geometry-properties</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/geometry-properties</code>
 Implementations shall allow the properties <code>geo:dimension</code>, <code>geo:coordinateDimension</code>, <code>geo:spatialDimension</code>, <code>geo:isEmpty</code>, <code>geo:isSimple</code>, <code>geo:hasSerialization</code> to be used in SPARQL graph patterns.</p>
@@ -3547,7 +3565,7 @@ Implementations shall allow the properties <code>geo:dimension</code>, <code>geo
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_1_4_code_conf_geometry_extension_query_functions_code"><a class="anchor" href="#_a_3_1_4_code_conf_geometry_extension_query_functions_code"></a>A.3.1.4 <code>/conf/geometry-extension/query-functions</code></h6>
+<h6 id="_a_3_1_4_confgeometry_extensionquery_functions"><a class="anchor" href="#_a_3_1_4_confgeometry_extensionquery_functions"></a>A.3.1.4 <code>/conf/geometry-extension/query-functions</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/query-functions</code>
 Implementations shall support <code>geof:distance</code>, <code>geof:buffer</code>, <code>geof:convexHull</code>, <code>geof:intersection</code>, <code>geof:union</code>, <code>geof:difference</code>, <code>geof:symDifference</code>, <code>geof:envelope and `geof:boundary</code> as SPARQL extension functions, consistent with the definitions of the corresponding functions (distance, buffer, convexHull, intersection, difference, symDifference, envelope and boundary respectively) in Simple Features [ISO 19125-1].</p>
@@ -3566,7 +3584,7 @@ Implementations shall support <code>geof:distance</code>, <code>geof:buffer</cod
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_1_5_code_conf_geometry_extension_srid_function_code"><a class="anchor" href="#_a_3_1_5_code_conf_geometry_extension_srid_function_code"></a>A.3.1.5 <code>/conf/geometry-extension/srid-function</code></h6>
+<h6 id="_a_3_1_5_confgeometry_extensionsrid_function"><a class="anchor" href="#_a_3_1_5_confgeometry_extensionsrid_function"></a>A.3.1.5 <code>/conf/geometry-extension/srid-function</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/srid-function</code>
 Implementations shall support `geof:getSRID as a SPARQL extension function.</p>
@@ -3588,7 +3606,7 @@ Implementations shall support `geof:getSRID as a SPARQL extension function.</p>
 <div class="sect4">
 <h5 id="_a_3_2_serialization_wkt"><a class="anchor" href="#_a_3_2_serialization_wkt"></a>8.15.3.2. A.3.2 serialization = WKT</h5>
 <div class="sect5">
-<h6 id="_a_3_2_1_code_conf_geometry_extension_wkt_literal_code"><a class="anchor" href="#_a_3_2_1_code_conf_geometry_extension_wkt_literal_code"></a>A.3.2.1 <code>/conf/geometry-extension/wkt-literal</code></h6>
+<h6 id="_a_3_2_1_confgeometry_extensionwkt_literal"><a class="anchor" href="#_a_3_2_1_confgeometry_extensionwkt_literal"></a>A.3.2.1 <code>/conf/geometry-extension/wkt-literal</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/wkt-literal</code>
 All RDFS Literals of type geo:wktLiteral shall consist of an optional URI identifying the coordinate reference system followed by Simple Features Well Known Text (WKT) describing a geometric value. Valid geo:wktLiterals are formed by concatenating a valid, absolute URI as defined in [RFC 2396], one or more spaces (Unicode U+0020 character) as a separator, and a WKT string as defined in Simple Features [ISO 19125-1].</p>
@@ -3608,7 +3626,7 @@ correct result for a test dataset.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_2_2_code_conf_geometry_extension_wkt_literal_default_srs_code"><a class="anchor" href="#_a_3_2_2_code_conf_geometry_extension_wkt_literal_default_srs_code"></a>A.3.2.2 <code>/conf/geometry-extension/wkt-literal-default-srs</code></h6>
+<h6 id="_a_3_2_2_confgeometry_extensionwkt_literal_default_srs"><a class="anchor" href="#_a_3_2_2_confgeometry_extensionwkt_literal_default_srs"></a>A.3.2.2 <code>/conf/geometry-extension/wkt-literal-default-srs</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/wkt-literal-default-srs</code>
 The URI <a href="http://www.opengis.net/def/crs/OGC/1.3/CRS84" class="bare">http://www.opengis.net/def/crs/OGC/1.3/CRS84</a> shall be assumed as the spatial reference system for geo:wktLiterals that do not specify an explicit spatial reference system URI.</p>
@@ -3627,7 +3645,7 @@ The URI <a href="http://www.opengis.net/def/crs/OGC/1.3/CRS84" class="bare">http
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_2_3_code_conf_geometry_extension_wkt_axis_order_code"><a class="anchor" href="#_a_3_2_3_code_conf_geometry_extension_wkt_axis_order_code"></a>A.3.2.3 <code>/conf/geometry-extension/wkt-axis-order</code></h6>
+<h6 id="_a_3_2_3_confgeometry_extensionwkt_axis_order"><a class="anchor" href="#_a_3_2_3_confgeometry_extensionwkt_axis_order"></a>A.3.2.3 <code>/conf/geometry-extension/wkt-axis-order</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/wkt-axis-order</code>
 Coordinate tuples within geo:wktLiterals shall be interpreted using the axis order defined in the spatial reference system used.</p>
@@ -3646,7 +3664,7 @@ Coordinate tuples within geo:wktLiterals shall be interpreted using the axis ord
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_2_4_code_conf_geometry_extension_wkt_literal_empty_code"><a class="anchor" href="#_a_3_2_4_code_conf_geometry_extension_wkt_literal_empty_code"></a>A.3.2.4 <code>/conf/geometry-extension/wkt-literal-empty</code></h6>
+<h6 id="_a_3_2_4_confgeometry_extensionwkt_literal_empty"><a class="anchor" href="#_a_3_2_4_confgeometry_extensionwkt_literal_empty"></a>A.3.2.4 <code>/conf/geometry-extension/wkt-literal-empty</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/wkt-literal-empty</code>
 An empty RDFS Literal of type geo:wktLiteral shall be interpreted as an empty geometry.</p>
@@ -3665,7 +3683,7 @@ An empty RDFS Literal of type geo:wktLiteral shall be interpreted as an empty ge
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_2_5_code_conf_geometry_extension_geometry_as_wkt_literal_code"><a class="anchor" href="#_a_3_2_5_code_conf_geometry_extension_geometry_as_wkt_literal_code"></a>A.3.2.5 <code>/conf/geometry-extension/geometry-as-wkt-literal</code></h6>
+<h6 id="_a_3_2_5_confgeometry_extensiongeometry_as_wkt_literal"><a class="anchor" href="#_a_3_2_5_confgeometry_extensiongeometry_as_wkt_literal"></a>A.3.2.5 <code>/conf/geometry-extension/geometry-as-wkt-literal</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/geometry-as-wkt-literal</code>
 Implementations shall allow the RDF property geo:asWKT to be used in SPARQL graph patterns.</p>
@@ -3687,7 +3705,7 @@ Implementations shall allow the RDF property geo:asWKT to be used in SPARQL grap
 <div class="sect4">
 <h5 id="_a_3_3_serialization_gml"><a class="anchor" href="#_a_3_3_serialization_gml"></a>8.15.3.3. A.3.3 serialization = GML</h5>
 <div class="sect5">
-<h6 id="_a_3_3_1_code_conf_geometry_extension_gml_literal_code"><a class="anchor" href="#_a_3_3_1_code_conf_geometry_extension_gml_literal_code"></a>A.3.3.1 <code>/conf/geometry-extension/gml-literal</code></h6>
+<h6 id="_a_3_3_1_confgeometry_extensiongml_literal"><a class="anchor" href="#_a_3_3_1_confgeometry_extensiongml_literal"></a>A.3.3.1 <code>/conf/geometry-extension/gml-literal</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/gml-literal</code>
 All <code>geo:gmlLiterals</code> shall consist of a valid element from the GML schema that implements a subtype of GM_Object as defined in [OGC 07-036].</p>
@@ -3706,7 +3724,7 @@ All <code>geo:gmlLiterals</code> shall consist of a valid element from the GML s
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_3_2_code_conf_geometry_extension_gml_literal_empty_code"><a class="anchor" href="#_a_3_3_2_code_conf_geometry_extension_gml_literal_empty_code"></a>A.3.3.2 <code>/conf/geometry-extension/gml-literal-empty</code></h6>
+<h6 id="_a_3_3_2_confgeometry_extensiongml_literal_empty"><a class="anchor" href="#_a_3_3_2_confgeometry_extensiongml_literal_empty"></a>A.3.3.2 <code>/conf/geometry-extension/gml-literal-empty</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/gml-literal-empty</code>
 An empty <code>geo:gmlLiteral</code> shall be interpreted as an empty geometry.</p>
@@ -3725,7 +3743,7 @@ An empty <code>geo:gmlLiteral</code> shall be interpreted as an empty geometry.<
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_3_3_code_conf_geometry_extension_gml_profile_code"><a class="anchor" href="#_a_3_3_3_code_conf_geometry_extension_gml_profile_code"></a>A.3.3.3 <code>/conf/geometry-extension/gml-profile</code></h6>
+<h6 id="_a_3_3_3_confgeometry_extensiongml_profile"><a class="anchor" href="#_a_3_3_3_confgeometry_extensiongml_profile"></a>A.3.3.3 <code>/conf/geometry-extension/gml-profile</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/gml-profile</code>
 Implementations shall document supported GML profiles.</p>
@@ -3745,7 +3763,7 @@ supported GML profiles are documented.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_a_3_3_4_code_conf_geometry_extension_geometry_as_gml_literal_code"><a class="anchor" href="#_a_3_3_4_code_conf_geometry_extension_geometry_as_gml_literal_code"></a>A.3.3.4 <code>/conf/geometry-extension/geometry-as-gml-literal</code></h6>
+<h6 id="_a_3_3_4_confgeometry_extensiongeometry_as_gml_literal"><a class="anchor" href="#_a_3_3_4_confgeometry_extensiongeometry_as_gml_literal"></a>A.3.3.4 <code>/conf/geometry-extension/geometry-as-gml-literal</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-extension/geometry-as-gml-literal</code>
 Implementations shall allow the RDF property geo:asGML to be used in SPARQL graph patterns.</p>
@@ -3773,7 +3791,7 @@ Implementations shall allow the RDF property geo:asGML to be used in SPARQL grap
 <div class="sect4">
 <h5 id="_a_4_1_tests_for_all_relation_families"><a class="anchor" href="#_a_4_1_tests_for_all_relation_families"></a>8.15.4.1. A.4.1 Tests for all relation families</h5>
 <div class="sect5">
-<h6 id="_a_4_1_1_code_conf_geometry_topology_extension_relate_query_function_code"><a class="anchor" href="#_a_4_1_1_code_conf_geometry_topology_extension_relate_query_function_code"></a>A.4.1.1 <code>/conf/geometry-topology-extension/relate-query-function</code></h6>
+<h6 id="_a_4_1_1_confgeometry_topology_extensionrelate_query_function"><a class="anchor" href="#_a_4_1_1_confgeometry_topology_extensionrelate_query_function"></a>A.4.1.1 <code>/conf/geometry-topology-extension/relate-query-function</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-topology-extension/relate-query-function</code>
 Implementations shall support `geof:relate as a SPARQL extension function, consistent with the relate operator defined in Simple Features [ISO 19125-1].</p>
@@ -3795,7 +3813,7 @@ Implementations shall support `geof:relate as a SPARQL extension function, consi
 <div class="sect4">
 <h5 id="_a_4_2_relation_family_simple_features"><a class="anchor" href="#_a_4_2_relation_family_simple_features"></a>8.15.4.2. A.4.2 relation_family = Simple Features</h5>
 <div class="sect5">
-<h6 id="_a_4_2_1_code_conf_geometry_topology_extension_sf_query_functions_code"><a class="anchor" href="#_a_4_2_1_code_conf_geometry_topology_extension_sf_query_functions_code"></a>A.4.2.1 <code>/conf/geometry-topology-extension/sf-query-functions</code></h6>
+<h6 id="_a_4_2_1_confgeometry_topology_extensionsf_query_functions"><a class="anchor" href="#_a_4_2_1_confgeometry_topology_extensionsf_query_functions"></a>A.4.2.1 <code>/conf/geometry-topology-extension/sf-query-functions</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-topology-extension/sf-query-functions</code>
 Implementations shall support <code>geof:sfEquals</code>, <code>geof:sfDisjoint</code>, <code>geof:sfIntersects</code>, <code>geof:sfTouches</code>, <code>geof:sfCrosses</code>, <code>geof:sfWithin</code>, <code>geof:sfContains</code>, <code>geof:sfOverlaps</code> as SPARQL extension functions, consistent with their corresponding DE-9IM intersection patterns, as defined by Simple Features [ISO 19125-1].</p>
@@ -3817,7 +3835,7 @@ Implementations shall support <code>geof:sfEquals</code>, <code>geof:sfDisjoint<
 <div class="sect4">
 <h5 id="_a_4_3_relation_family_egenhofer"><a class="anchor" href="#_a_4_3_relation_family_egenhofer"></a>8.15.4.3. A.4.3 relation_family = Egenhofer</h5>
 <div class="sect5">
-<h6 id="_a_4_3_1_code_conf_geometry_topology_extension_eh_query_functions_code"><a class="anchor" href="#_a_4_3_1_code_conf_geometry_topology_extension_eh_query_functions_code"></a>A.4.3.1 <code>/conf/geometry-topology-extension/eh-query-functions</code></h6>
+<h6 id="_a_4_3_1_confgeometry_topology_extensioneh_query_functions"><a class="anchor" href="#_a_4_3_1_confgeometry_topology_extensioneh_query_functions"></a>A.4.3.1 <code>/conf/geometry-topology-extension/eh-query-functions</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-topology-extension/eh-query-functions</code>
 Implementations shall support <code>geof:ehEquals</code>, <code>geof:ehDisjoint</code>, <code>geof:ehMeet</code>, <code>geof:ehOverlap</code>, <code>geof:ehCovers</code>, <code>geof:ehCoveredBy</code>, <code>geof:ehInside</code>, <code>geof:ehContains</code> as SPARQL extension functions, consistent with their corresponding DE-9IM intersection patterns, as defined by Simple Features [ISO 19125- 1].</p>
@@ -3839,7 +3857,7 @@ Implementations shall support <code>geof:ehEquals</code>, <code>geof:ehDisjoint<
 <div class="sect4">
 <h5 id="_a_4_4_relation_family_rcc8"><a class="anchor" href="#_a_4_4_relation_family_rcc8"></a>8.15.4.4. A.4.4 relation_family = RCC8</h5>
 <div class="sect5">
-<h6 id="_a_4_4_1_code_conf_geometry_topology_extension_rcc8_query_functions_code"><a class="anchor" href="#_a_4_4_1_code_conf_geometry_topology_extension_rcc8_query_functions_code"></a>A.4.4.1 <code>/conf/geometry-topology-extension/rcc8-query-functions</code></h6>
+<h6 id="_a_4_4_1_confgeometry_topology_extensionrcc8_query_functions"><a class="anchor" href="#_a_4_4_1_confgeometry_topology_extensionrcc8_query_functions"></a>A.4.4.1 <code>/conf/geometry-topology-extension/rcc8-query-functions</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/geometry-topology-extension/rcc8-query-functions
 Implementations shall support `geof:rcc8eq</code>, <code>geof:rcc8dc</code>, <code>geof:rcc8ec</code>, <code>geof:rcc8po</code>, <code>geof:rcc8tppi</code>, <code>geof:rcc8tpp</code>, <code>geof:rcc8ntpp</code>, <code>geof:rcc8ntppi</code> as SPARQL extension functions, consistent with their corresponding DE-9IM intersection patterns, as defined by Simple Features [ISO 19125-1].</p>
@@ -3867,7 +3885,7 @@ Implementations shall support `geof:rcc8eq</code>, <code>geof:rcc8dc</code>, <co
 <div class="sect4">
 <h5 id="_a_5_1_tests_for_all_implementations"><a class="anchor" href="#_a_5_1_tests_for_all_implementations"></a>8.15.5.1. A.5.1 Tests for all implementations</h5>
 <div class="sect5">
-<h6 id="_a_5_1_1_code_conf_rdfsentailmentextension_bgp_rdfs_ent_code"><a class="anchor" href="#_a_5_1_1_code_conf_rdfsentailmentextension_bgp_rdfs_ent_code"></a>A.5.1.1 <code>/conf/rdfsentailmentextension/bgp-rdfs-ent</code></h6>
+<h6 id="_a_5_1_1_confrdfsentailmentextensionbgp_rdfs_ent"><a class="anchor" href="#_a_5_1_1_confrdfsentailmentextensionbgp_rdfs_ent"></a>A.5.1.1 <code>/conf/rdfsentailmentextension/bgp-rdfs-ent</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/rdfs-entailment-extension/bgp-rdfs-ent</code>
 Basic graph pattern matching shall use the semantics defined by the RDFS Entailment Regime [W3C SPARQL Entailment].</p>
@@ -3887,9 +3905,9 @@ Basic graph pattern matching shall use the semantics defined by the RDFS Entailm
 </div>
 </div>
 <div class="sect4">
-<h5 id="_a_5_2_serialization_wkt"><a class="anchor" href="#_a_5_2_serialization_wkt"></a>8.15.5.2. A.5.2 serialization=WKT</h5>
+<h5 id="_a_5_2_serializationwkt"><a class="anchor" href="#_a_5_2_serializationwkt"></a>8.15.5.2. A.5.2 serialization=WKT</h5>
 <div class="sect5">
-<h6 id="_a_5_2_1_code_conf_rdfs_entailment_extension_wkt_geometry_types_code"><a class="anchor" href="#_a_5_2_1_code_conf_rdfs_entailment_extension_wkt_geometry_types_code"></a>A.5.2.1 <code>/conf/rdfs-entailment-extension/wkt-geometry-types</code></h6>
+<h6 id="_a_5_2_1_confrdfs_entailment_extensionwkt_geometry_types"><a class="anchor" href="#_a_5_2_1_confrdfs_entailment_extensionwkt_geometry_types"></a>A.5.2.1 <code>/conf/rdfs-entailment-extension/wkt-geometry-types</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/rdfs-entailment-extension/wkt-geometry-types</code>
 Implementations shall support graph patterns involving terms from an RDFS/OWL class hierarchy of geometry types consistent with the one in the specified version of Simple Features [ISO 19125-1].</p>
@@ -3906,9 +3924,9 @@ Implementations shall support graph patterns involving terms from an RDFS/OWL cl
 </div>
 </div>
 <div class="sect4">
-<h5 id="_a_5_3_serialization_gml"><a class="anchor" href="#_a_5_3_serialization_gml"></a>8.15.5.3. A.5.3 serialization=GML</h5>
+<h5 id="_a_5_3_serializationgml"><a class="anchor" href="#_a_5_3_serializationgml"></a>8.15.5.3. A.5.3 serialization=GML</h5>
 <div class="sect5">
-<h6 id="_a_5_3_1_code_conf_rdfs_entailment_extension_gml_geometry_types_code"><a class="anchor" href="#_a_5_3_1_code_conf_rdfs_entailment_extension_gml_geometry_types_code"></a>A.5.3.1 <code>/conf/rdfs-entailment-extension/gml-geometry-types</code></h6>
+<h6 id="_a_5_3_1_confrdfs_entailment_extensiongml_geometry_types"><a class="anchor" href="#_a_5_3_1_confrdfs_entailment_extensiongml_geometry_types"></a>A.5.3.1 <code>/conf/rdfs-entailment-extension/gml-geometry-types</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/rdfs-entailment-extension/gml-geometry-types</code>
 Implementations shall support graph patterns involving terms from an RDFS/OWL class hierarchy of geometry types consistent with the GML schema that implements GM_Object using the specified version of GML [OGC 07-036].</p>
@@ -3936,7 +3954,7 @@ Implementations shall support graph patterns involving terms from an RDFS/OWL cl
 <div class="sect4">
 <h5 id="_a_6_1_relation_family_simple_features"><a class="anchor" href="#_a_6_1_relation_family_simple_features"></a>8.15.6.1. A.6.1 relation_family = Simple Features</h5>
 <div class="sect5">
-<h6 id="_a_6_1_1_code_conf_query_rewrite_extension_sf_query_rewrite_code"><a class="anchor" href="#_a_6_1_1_code_conf_query_rewrite_extension_sf_query_rewrite_code"></a>A.6.1.1 <code>/conf/query-rewrite-extension/sf-query-rewrite</code></h6>
+<h6 id="_a_6_1_1_confquery_rewrite_extensionsf_query_rewrite"><a class="anchor" href="#_a_6_1_1_confquery_rewrite_extensionsf_query_rewrite"></a>A.6.1.1 <code>/conf/query-rewrite-extension/sf-query-rewrite</code></h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/query-rewrite-extension/sf-query-rewrite</code>
 Basic graph pattern matching shall use the semantics defined by the RIF Core Entailment Regime [W3C SPARQL Entailment] for the RIF rules [W3C RIF Core] <code>geor:sfEquals</code>, <code>geor:sfDisjoint</code>, <code>geor:sfIntersects</code>, <code>geor:sfTouches</code>, <code>geor:sfCrosses</code>, <code>geor:sfWithin</code>, <code>geor:sfContains</code>, <code>geor:sfOverlaps</code>.</p>
@@ -3958,7 +3976,7 @@ Basic graph pattern matching shall use the semantics defined by the RIF Core Ent
 <div class="sect4">
 <h5 id="_a_6_2_relation_family_egenhofer"><a class="anchor" href="#_a_6_2_relation_family_egenhofer"></a>8.15.6.2. A.6.2 relation_family = Egenhofer</h5>
 <div class="sect5">
-<h6 id="_a_6_2_1_conf_query_rewrite_extension_eh_query_rewrite"><a class="anchor" href="#_a_6_2_1_conf_query_rewrite_extension_eh_query_rewrite"></a>A.6.2.1 `/conf/query-rewrite-extension/eh-query-rewrite</h6>
+<h6 id="_a_6_2_1_confquery_rewrite_extensioneh_query_rewrite"><a class="anchor" href="#_a_6_2_1_confquery_rewrite_extensioneh_query_rewrite"></a>A.6.2.1 `/conf/query-rewrite-extension/eh-query-rewrite</h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/query-rewrite-extension/eh-query-rewrite
 Basic graph pattern matching shall use the semantics defined by the RIF Core Entailment Regime [W3C SPARQL Entailment] for the RIF rules [W3C RIF Core] `geor:ehEquals</code>, <code>geor:ehDisjoint</code>, <code>geor:ehMeet</code>, <code>geor:ehOverlap</code>, <code>geor:ehCovers</code>, <code>geor:ehCoveredBy</code>, <code>geor:ehInside</code>, <code>geor:ehContains</code>.</p>
@@ -3977,7 +3995,7 @@ Basic graph pattern matching shall use the semantics defined by the RIF Core Ent
 <div class="sect4">
 <h5 id="_a_6_3_relation_family_rcc8"><a class="anchor" href="#_a_6_3_relation_family_rcc8"></a>8.15.6.3. A.6.3 relation_family = RCC8</h5>
 <div class="sect5">
-<h6 id="_a_6_3_1_conf_query_rewrite_extension_rcc8_query_rewrite"><a class="anchor" href="#_a_6_3_1_conf_query_rewrite_extension_rcc8_query_rewrite"></a>A.6.3.1 `/conf/query-rewrite-extension/rcc8-query-rewrite</h6>
+<h6 id="_a_6_3_1_confquery_rewrite_extensionrcc8_query_rewrite"><a class="anchor" href="#_a_6_3_1_confquery_rewrite_extensionrcc8_query_rewrite"></a>A.6.3.1 `/conf/query-rewrite-extension/rcc8-query-rewrite</h6>
 <div class="paragraph">
 <p><strong>Requirement</strong>: <code>/req/query-rewrite-extension/rcc8-query-rewrite
 Basic graph pattern matching shall use the semantics defined by the RIF Core Entailment Regime [W3C SPARQL Entailment] for the RIF rules [W3C RIF Core] `geor:rcc8eq</code>, <code>geor:rcc8dc</code>, <code>geor:rcc8ec</code>, <code>geor:rcc8po</code>, <code>geor:rcc8tppi</code>, <code>geor:rcc8tpp</code>, <code>geor:rcc8ntpp</code>, <code>geor:rcc8ntppi</code>.</p>
@@ -4000,7 +4018,7 @@ Basic graph pattern matching shall use the semantics defined by the RIF Core Ent
 
 </div>
 <div class="sect2">
-<h3 id="__informative"><a class="anchor" href="#__informative"></a>8.17. (informative)</h3>
+<h3 id="_informative"><a class="anchor" href="#_informative"></a>8.17. (informative)</h3>
 
 </div>
 <div class="sect2">
@@ -4220,7 +4238,7 @@ WHERE {
 <div class="paragraph">
 <p><strong>Result</strong>:</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -4261,7 +4279,7 @@ WHERE { ?f my:hasPointGeometry ?fGeom .
 <div class="paragraph">
 <p><strong>Result</strong>:</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -4301,7 +4319,7 @@ WHERE { ?f my:hasExactGeometry ?fGeom .
 <div class="paragraph">
 <p><strong>Result</strong>:</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -4339,7 +4357,7 @@ LIMIT 3</code></pre>
 <div class="paragraph">
 <p><strong>Result</strong>:</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -4424,7 +4442,7 @@ WHERE { { # check for asserted statement
 <div class="paragraph">
 <p><strong>Result</strong>:</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -4453,7 +4471,7 @@ WHERE { { # check for asserted statement
 </div>
 </div>
 <div class="sect1">
-<h2 id="_bibliography"><a class="anchor" href="#_bibliography"></a>9. Bibliography</h2>
+<h2 id="_bibliography"><a class="anchor" href="#_bibliography"></a>Bibliography</h2>
 <div class="sectionbody">
 <div id="QUAL" class="paragraph">
 <p>[1] Cohn, Anthony G., Brandon Bennett, John Gooday, Nicholas Mark Gotts, <em>Qualitative Spatial Representation and Reasoning with the Region Connection Calculus</em>, GeoInformatica, 1, 275–316, 1997.</p>
@@ -4527,7 +4545,7 @@ Recommendation (27 October 2009)</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-01-30 15:47:41 UTC
+Last updated 2021-02-03 21:30:50 UTC
 </div>
 </div>
 </body>
