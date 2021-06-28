@@ -99,8 +99,6 @@ These new ontology elements and new functions are normatively defined in this sp
 |hasLength | <<Property: geo:hasLength>>
 |hasArea | <<Property: geo:hasArea>>
 |hasVolume | <<Property: geo:hasVolume>>
-2+|_Geometry Properties_
-|inSRS | <<Property: geo:inSRS>>
 2+|_Geometry Serializations_
 |asWKT function | <<Function: geof:asWKT>>
 |asGML function | <<Function: geof:asGML>>
@@ -111,8 +109,9 @@ These new ontology elements and new functions are normatively defined in this sp
 |asKML | <<Property: geo:asKML>>
 |asKML function | <<Function: geof:asKML>>
 |dggsLiteral | <<RDFS Datatype: geo:dggsLiteral>>
-|asDGGSWKT | <<Property: geo:asDGGSWKT>>
-|asDGGSWKT function | <<Function: geo:asDGGSWKT>>
+|auspixDggsLiteral | <<RDFS Datatype: geo:auspixDggsLiteral>>
+|asDGGS | <<Property: geo:asDGGS>>
+|asDGGS function | <<Function: geo:asDGGS>>
 2+|_Non-topological Query Functions_
 |maxX | <<Function: geof:maxX>>
 |maxY | <<Function: geof:maxY>>
