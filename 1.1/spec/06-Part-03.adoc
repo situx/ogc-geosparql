@@ -4,9 +4,9 @@ The following normative documents contain provisions which, through reference in
 
 Items in this list are liked to their full citation <<Bibliography>>.
 
-* <<ISO19125-1>>, _ISO 19125-1: Geographic information — Simple feature access — Part 1: Common architecture_
+* <<OGC06-103r4>>, _OGC 06-103r4, OpenGIS Implementation Standard for Geographic information — Simple feature access — Part 1: Common architecture_ (also available from ISO: <<ISO19125-1>>)
 
-* <<ISO19156>>, _ISO 19156: Geographic information — Observations and measurements_
+* <<OGC10-004r3>>, _OGC 10-004r3, Geographic information  — Observations and measurements_ (also available from ISO: <<ISO19156>>)
 
 * <<OGC07-036>>, _OGC 07-036: Geography Markup Language (GML) Encoding Standard_
 
